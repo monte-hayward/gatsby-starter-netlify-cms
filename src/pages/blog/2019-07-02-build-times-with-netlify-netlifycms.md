@@ -10,6 +10,11 @@ tags:
   - build
   - cms
 ---
+##Update: 
+upgraded to gatsby `2.13.0 from `^2.1.34`, and updated everything gatsby or netlify-related. Netlify build took 6 minutes. Now adding this paragraph in Content Manager. We'll see if build time decreases.
+
+<hr/>
+
 This example site builds in about 2 minutes.
 If you include an image and do not kill the image deploy, 4+ minutes.
 Use of `editorial_workflow` could cut down on builds activated.
@@ -19,6 +24,8 @@ The next step clearly would be incremental builds, which are not without complic
 
 What about Gatbsy incremental builds, though? `Searching...` 
 In late May, an [alpha version](https://github.com/gatsbyjs/gatsby/issues/5002#issuecomment-496689016) had incremental builds. It appears the solution went live in [2.9.0](https://github.com/gatsbyjs/gatsby/pull/14359#issuecomment-500707616) June 11.
+
+
 
 ```shell
 3:28:12 PM: Build ready to start
