@@ -12,9 +12,11 @@ tags:
 ---
 This example site builds in about 2 minutes.
 If you include an image and do not kill the image deploy, 4+ minutes.
+Use of `editorial_workflow` could cut down on builds activated.
+When there are > 5 builds concurrently running, Netlify kills the middle ones and keeps the first and last, docs report.
 
 ```shell
-:28:12 PM: Build ready to start
+3:28:12 PM: Build ready to start
 3:28:15 PM: build-image version: 9e0f207a27642d0115b1ca97cd5e8cebbe492f63
 3:28:15 PM: build-image tag: v3.3.2
 3:28:15 PM: buildbot version: ef8d0929ed0baabafd8bbb7d0b021e1fc24180c0
