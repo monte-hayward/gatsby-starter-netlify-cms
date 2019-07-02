@@ -10,10 +10,18 @@ tags:
   - build
   - cms
 ---
-##Update: 
-upgraded to gatsby `2.13.0 from `^2.1.34`, and updated everything gatsby or netlify-related. Netlify build took 6 minutes. Now adding this paragraph in Content Manager. We'll see if build time decreases.
+##Updates in reverse chrono order: 
+
+upgraded yarn via netlify.toml and that non-cached dep took time to download. 4m24.013222221s. Now making content change. Build reported this instead of ~69 files: `All files already uploaded` and
+`All files already uploaded by a previous deploy with the same commits.`
+
+Going to try another content commit.
+
 
 Hm. took 4m13.49600654s. Gap between between log entry starting generate thumbnails and the one starting purgecss.
+
+upgraded to gatsby `2.13.0 from `^2.1.34`, and updated everything gatsby or netlify-related. Netlify build took 6 minutes. Now adding this paragraph in Content Manager. We'll see if build time decreases.
+
 
 ```shell
 5:38:47 PM: info bootstrap finished - 17.411 s
