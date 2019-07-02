@@ -15,6 +15,8 @@ If you include an image and do not kill the image deploy, 4+ minutes.
 Use of `editorial_workflow` could cut down on builds activated.
 When there are > 5 builds concurrently running, Netlify kills the middle ones and keeps the first and last, docs report.
 
+The next step clearly would be incremental builds, which are not without complications. They are described for React Static sites in [How to Scale Massive React Static sites with Incremental Builds](https://www.netlify.com/blog/2019/01/17/how-to-scale-massive-react-static-sites-with-incremental-builds/). What about Gatbsy, though? `Searching...`
+
 ```shell
 3:28:12 PM: Build ready to start
 3:28:15 PM: build-image version: 9e0f207a27642d0115b1ca97cd5e8cebbe492f63
