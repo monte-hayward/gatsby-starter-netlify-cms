@@ -11,7 +11,7 @@ tags:
   - cms
 ---
 This example site builds in about 2 minutes.
-
+If you include an image and do not kill the image deploy, 4+ minutes.
 
 ```shell
 :28:12 PM: Build ready to start
@@ -68,5 +68,58 @@ This example site builds in about 2 minutes.
 3:30:02 PM: Post processing done
 3:30:02 PM: Site is live
 3:30:27 PM: Finished processing build request in 2m12.117979123s
+```
+## Uploading an Image Requires its own build
 
+Image is a required field on blog posts. A Netlify build launches when the image is committed, which is before the page is committed.
+
+### Image upload
+
+```
+3:37:24 PM: Build ready to start
+...
+3:39:38 PM: Finished processing build request in 2m9.883058191s
+```
+
+### blog post save
+
+```shell
+3:38:04 PM: Waiting to build. Currently running 1 concurrent builds on your account
+...
+3:41:14 PM: Finished processing build request in 2m0.668940422s
+```
+
+The page commit build reports number of files changed.
+
+```
+69 new files uploaded
+
+26 generated pages and 43 assets changed.
+
+New pages include:
+
+index.html
+404/index.html
+about/index.html
+blog/index.html
+contact/index.html
+products/index.html
+404.html
+blog/2016-12-17-making-sense-of-the-scaas-new-flavor-wheel/index.html
+blog/2019-07-02-build-times-with-netlify-netlifycms/index.html
+blog/2019-07-02-quick-add-blog/index.html
+
+No redirect rules processed
+
+This deploy did not include any redirect rules. Learn more about redirects.
+
+info
+49 header rules processed
+
+All header rules deployed without errors.
+
+info
+All linked resources are secure
+
+Congratulations! No insecure mixed content found in your files.
 ```
