@@ -10,6 +10,32 @@ tags:
   - build
   - cms
 ---
+##Update: 
+upgraded to gatsby `2.13.0 from `^2.1.34`, and updated everything gatsby or netlify-related. Netlify build took 6 minutes. Now adding this paragraph in Content Manager. We'll see if build time decreases.
+
+Hm. took 4m13.49600654s. Gap between between log entry starting generate thumbnails and the one starting purgecss.
+
+```shell
+5:38:47 PM: info bootstrap finished - 17.411 s
+5:38:48 PM: success run static queries — 0.276 — 2/2 7.28 queries/second
+5:38:50 PM: success Generating image thumbnails — 23/23 - 2.151 s
+5:40:37 PM: gatsby-plugin-purgecss: Only processing  /opt/build/repo/src/components/all.sass
+5:40:56 PM: success Building production JavaScript and CSS bundles — 128.295
+5:40:56 PM: success Rewriting compilation hashes — 0.001
+5:40:57 PM: success run page queries — 1.074 — 26/26 24.22 queries/second
+5:40:59 PM: success Generating image thumbnails — 38/38 - 2.941 s
+5:40:59 PM: 
+5:40:59 PM: gatsby-plugin-purgecss:
+5:40:59 PM:  Previous CSS Size: 235.50 KB
+5:40:59 PM:  New CSS Size: 24.94 KB (-89.41%)
+5:40:59 PM:  Removed ~210.56 KB of CSS
+5:40:59 PM: 
+5:41:01 PM: success Building static HTML for pages — 1.760 — 26/26 85.65 pages/second
+5:41:01 PM: info Done building in 150.997 sec
+```
+
+<hr/>
+
 This example site builds in about 2 minutes.
 If you include an image and do not kill the image deploy, 4+ minutes.
 Use of `editorial_workflow` could cut down on builds activated.
@@ -19,6 +45,8 @@ The next step clearly would be incremental builds, which are not without complic
 
 What about Gatbsy incremental builds, though? `Searching...` 
 In late May, an [alpha version](https://github.com/gatsbyjs/gatsby/issues/5002#issuecomment-496689016) had incremental builds. It appears the solution went live in [2.9.0](https://github.com/gatsbyjs/gatsby/pull/14359#issuecomment-500707616) June 11.
+
+
 
 ```shell
 3:28:12 PM: Build ready to start
