@@ -12,6 +12,17 @@ tags:
 ---
 ##Updates in reverse chrono order: 
 
+I notice that `gatsby clean` is "[useful as a last resort](https://www.gatsbyjs.org/docs/gatsby-cli/#clean)", but is in package.json script `build:app`. Removing it improves local build times and has no effect on zeit or netlify.
+
+```
+156.677 sec    local build after clean
+ 57.832 sec    local build, no clean
+154.908 sec    zeit.co CLI build  "4m" 
+151.166 sec    netlify auto build. 4m5.5
+```
+
+A Zeit now first deploy took ~6m.
+
 upgraded yarn via netlify.toml and that non-cached dep took time to download. 4m24.013222221s. Now making content change. Build reported this instead of ~69 files: `All files already uploaded` and
 `All files already uploaded by a previous deploy with the same commits.`
 
